@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 14:54:52 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 14:54:59 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:02:10 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 int	ft_check_placeable(int **answer, int pos, int numtoput)
 {
-	int	i;
+	int	row;
+	int	column;
 
-	i = -1;
-	while (++i < pos / 4)
+	row = -1;
+	column = -1;
+	while (++row < pos / 4)
 	{
-		if (answer[i][pos % 4] == numtoput)
+		if (answer[row][pos % 4] == numtoput)
 			return (1);
 	}
-	i = -1;
-	while (++i < pos % 4)
+	while (++column < pos % 4)
 	{
-		if (answer[pos / 4][i] == numtoput)
+		if (answer[pos / 4][column] == numtoput)
 			return (1);
 	}
 	return (0);
@@ -61,10 +62,10 @@ void	ft_display(int **answer)
 	int	column;
 
 	row = -1;
-	while (++i < 4)
+	while (++row < 4)
 	{
 		column = -1;
-		while (++j < 4)
+		while (++column < 4)
 		{
 			ft_putnbr(answer[row][column]);
 			ft_putchar(' ');
@@ -78,9 +79,9 @@ int	main(int ac, char **av)
 	int	answer[4][4];
 	int	*edgeclue;
 
-	if (check(ac, av) == 1)
+	if (ft_check(ac, av) == 1)
 		return (0);
-	edgeclue = get_numbers(av[1]);
+	edgeclue = ft_get_numbers(av[1]);
 	if (ft_checkedge(edgeclue))
 	{
 		ft_putstr("Did not find any solutions\n");
