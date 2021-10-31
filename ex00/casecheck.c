@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 16:22:32 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 16:36:08 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:05:59 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	ft_check_col_down(int **answer, int pos, int *edgeclue)
 		{
 			if (answer[row][pos % 4] > curr_max_height)
 			{
-				curr_max_height = answe[row][pos % 4];
+				curr_max_height = answer[row][pos % 4];
 				visible_towers++;
 			}
 			row--;

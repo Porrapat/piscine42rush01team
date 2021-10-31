@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 15:01:25 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 15:01:29 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 20:24:31 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int		ft_strlen(char *str);
 int		*ft_get_numbers(char *str);
 int		ft_check(int ac, char **av);
 int		ft_check_case(int **answer, int pos, int *edgeclue);
-int		ft_checkedge(int *edgeclue);
+int		**ft_initialize_answerboard(int size);
 
 #endif

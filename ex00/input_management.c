@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 15:36:20 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 15:58:57 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:56:46 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int	ft_check_unwanted(char *argstr)
 
 int	ft_check(int ac, char **av)
 {
-	char	*str;
-
 	if (ac != 2)
 	{
 		ft_putstr("Error: Argument format\n");
@@ -58,7 +56,7 @@ int	*ft_get_numbers(char *argstr)
 	int	index;
 	int	*input;
 
-	input = malloc(sizeof(int) * 16);
+	input = malloc(sizeof(int) * 17);
 	charnum = 0;
 	index = 0;
 	while (argstr[charnum] != '\0')
@@ -71,4 +69,19 @@ int	*ft_get_numbers(char *argstr)
 		charnum++;
 	}
 	return (input);
+}
+
+int	**ft_initialize_answerboard(int size)
+{
+	int	**arr;
+	int	index;
+
+	index = 0;
+	arr = malloc(sizeof(int) * size + 1);
+	while (index < size)
+	{
+		arr[index] = malloc(sizeof(int) * size + 1);
+		index++;
+	}
+	return (arr);
 }
