@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 15:36:20 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 19:56:46 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 21:28:16 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ int	ft_check_unwanted(char *argstr)
 	return (0);
 }
 
+//check count, format, length
+//and unwated character in argument
+//if there is any anomaly return 1
 int	ft_check(int ac, char **av)
 {
 	if (ac != 2)
@@ -50,6 +53,7 @@ int	ft_check(int ac, char **av)
 	return (0);
 }
 
+// convert argument's string to integer array
 int	*ft_get_numbers(char *argstr)
 {
 	int	charnum;

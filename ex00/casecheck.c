@@ -6,10 +6,12 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 16:22:32 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 19:05:59 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 21:26:55 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//if there is any anomaly return 1
+//compare with edgeclue[0 to 3]
 int	ft_check_col_up(int **answer, int pos, int *edgeclue)
 {
 	int	row;
@@ -36,6 +38,7 @@ int	ft_check_col_up(int **answer, int pos, int *edgeclue)
 	return (0);
 }
 
+//compare with edgeclue[12 to 15]
 int	ft_check_row_right(int **answer, int pos, int *edgeclue)
 {
 	int	column;
@@ -62,6 +65,7 @@ int	ft_check_row_right(int **answer, int pos, int *edgeclue)
 	return (0);
 }
 
+//compare with edgeclue[4 to 7]
 int	ft_check_col_down(int **answer, int pos, int *edgeclue)
 {
 	int	row;
@@ -88,6 +92,7 @@ int	ft_check_col_down(int **answer, int pos, int *edgeclue)
 	return (0);
 }
 
+//compare with edgeclue[8 to 11]
 int	ft_check_row_left(int **answer, int pos, int *edgeclue)
 {
 	int	column;
