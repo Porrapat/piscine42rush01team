@@ -6,7 +6,7 @@
 /*   By: mmaythaw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 16:22:32 by mmaythaw          #+#    #+#             */
-/*   Updated: 2021/10/31 16:34:27 by mmaythaw         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:36:08 by mmaythaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	ft_check_col_down(int **answer, int pos, int *edgeclue)
 		{
 			if (answer[row][pos % 4] > curr_max_height)
 			{
-				curr_max_height = tab[row][pos % 4];
+				curr_max_height = answe[row][pos % 4];
 				visible_towers++;
 			}
 			row--;
@@ -101,7 +101,7 @@ int	ft_check_row_left(int **answer, int pos, int *edgeclue)
 	{
 		while (column < 4)
 		{
-			if (answer[pos / 4][i] > curr_max_height)
+			if (answer[pos / 4][column] > curr_max_height)
 			{
 				curr_max_height = answer[pos / 4][column];
 				visible_towers++;
@@ -122,7 +122,7 @@ int	ft_check_case(int **answer, int pos, int *edgeclue)
 		return (1);
 	if (ft_check_col_down(answer, pos, edgeclue) == 1)
 		return (1);
-	if (ft_check_col_up(answer, pos, endgeclue) == 1)
+	if (ft_check_col_up(answer, pos, edgeclue) == 1)
 		return (1);
 	return (0);
 }
